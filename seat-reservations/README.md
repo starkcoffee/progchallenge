@@ -17,6 +17,8 @@ _As a Deutsche Bahn personnel, I want to get a list of the seats that are reserv
 
 ###Here's how you are going to do it
 
+Fork this repository, then clone it to your local machine. Don't forget to commit small chunks of progress.
+
 It's a ruby app, so we've provided you with a ruby script that handles the commandline input and output. Clone this repository and run:
 
 	> ./reserve.rb
