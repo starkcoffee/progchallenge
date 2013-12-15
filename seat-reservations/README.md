@@ -2,7 +2,7 @@
 
 This is a revolutionary command line tool to reserve seats in a train.
 
-The purpose is for you to improve your pure programming skills, not your web development skills or your ability to use frameworks and libraries.
+The purpose is for you to improve your pure programming skills. 
 
 Watch out Deutsche Bahn!
 
@@ -32,9 +32,10 @@ You will get a prompt, and it works like this:
 If you run the other script `list`, it will list all the seat numbers that are reserved, eg.
 	
 	> ./list.rb
+	The following seats are reserved:
 	1,2,3,4,5,6,7,8,9,10,11,12,13
 	
-For now the carriage has 20 seats in rows of 2. You can allocate the seats just sequentially for now, nothing fancy.
+That means seats 1-13 have been reserved. For now the carriage has 20 seats in rows of 2. You can allocate the seats just sequentially for now, nothing fancy.
 
 If the customer tries to reserve seats and there are none left, you should do something sensible, since there is not yet a standard protocol for issuing electric shocks via the command line.
 
@@ -43,6 +44,12 @@ If the customer tries to reserve seats and there are none left, you should do so
 If you look at the scripts `reserve.rb` and `list.rb`, you will see that we expect you to build a class `ReservationService` that provides two core methods to interact with the reservation system.
 
 We have created a test suite in `spec/reservation_service_spec.rb` to get you started.
+
+It uses Minitest – the standard unit testing framework that comes with ruby these days. You can run the test with:
+
+	> ruby spec/reservation_service_spec.rb
+
+You can [find all available assertions here](http://ruby-doc.org/stdlib-2.0.0/libdoc/minitest/rdoc/MiniTest/Assertions.html).
 
 The only requirement is that you pass the existing tests and have the scripts working as above. You are free to add other files/classes/tests. 
 
