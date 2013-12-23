@@ -1,7 +1,8 @@
-require "test/unit"
+require "minitest/autorun"
+#require "test/unit"
 require "./lib/reservation_service"
 
-class ReservationServiceTest < Test::Unit::TestCase
+class ReservationServiceTest < Minitest::Test
 
   def setup
     @service = ReservationService.new

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require './lib/reservation_service'
+require 'yaml'
 
 service = ReservationService.new
 
@@ -11,6 +12,5 @@ num_seats = answer.to_i
 
 reserved_seat_numbers = service.reserve(num_seats)
 
-puts "Your reserved seat numbers are:"
-puts reserved_seat_numbers.join(',')
+puts reserved_seat_numbers
 
