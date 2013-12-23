@@ -6,6 +6,7 @@ class ReservationServiceTest < Minitest::Test
 
   def setup
     @service = ReservationService.new
+    @datafile = [1,2,3,4,5,6,7,8,9,10]
   end
 
   def test_reserving_seats_in_empty_carriage

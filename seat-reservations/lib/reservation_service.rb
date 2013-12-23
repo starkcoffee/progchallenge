@@ -14,15 +14,16 @@ class ReservationService
   def reserve(num_seats)
     # this is a dummy implementation
     seats = load_data
+    reserved_all = []
     
     if seats.size >= num_seats
       reserved_seats = seats.slice!(0, num_seats)
       save_data(seats)
       "Your reserved seat numbers are: #{reserved_seats}"
+    elsif seats.size == 0
+      "Sorry, we're fully booked"
     elsif seats.size < num_seats
       "Sorry, there are only #{seats.size} seats left"
-    else
-      "Sorry, we're fully booked"
     end
   end
 
@@ -32,8 +33,10 @@ class ReservationService
 
 
   def list_reserved()
-    # this is a dummy implementation
-    [1,2,3]
+    seats = load_data
+    total = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    reserved_seats = total.size - seats.size
+    total.slice(0, reserved_seats)
   end
 
   private
