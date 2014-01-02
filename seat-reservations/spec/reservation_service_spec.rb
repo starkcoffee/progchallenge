@@ -1,5 +1,4 @@
 require "minitest/autorun"
-#require "test/unit"
 require "./lib/reservation_service"
 
 class ReservationServiceTest < Minitest::Test
