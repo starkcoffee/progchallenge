@@ -12,7 +12,6 @@ class ReservationService
   end
 
   def reserve(num_seats)
-    # this is a dummy implementation
     seats = load_data
     reserved_all = []
     
