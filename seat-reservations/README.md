@@ -59,9 +59,16 @@ to interact with the reservation system.
 We have created a test suite in `spec/reservation_service_spec.rb` to get you started.
 
 It uses Minitest – the standard unit testing framework that comes with ruby
-these days. You can run the test with:
+these days. You can run the tests with:
 
 	> ruby spec/reservation_service_spec.rb
+
+The tests are marked with `skip`. Here's how we suggest you develop:
+remove `skip` from the first test, run it and see that it fails.
+Implement the code to make it pass. Commit your changes to git. Repeat
+for the next test until all tests are running and passing.
+
+Feel free to add more tests and classes to the ones we'e provided.
 
 You can [find all available assertions here](http://ruby-doc.org/stdlib-2.0.0/libdoc/minitest/rdoc/MiniTest/Assertions.html).
 
