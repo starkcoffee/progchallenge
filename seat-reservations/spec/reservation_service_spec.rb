@@ -18,7 +18,7 @@ class ReservationServiceTest < Test::Unit::TestCase
     @service.reserve(1)
     reserved_seat_numbers = @service.reserve(2)
 
-    assert_equal [1,2,3], reserved_seat_numbers
+    assert_equal [2,3], reserved_seat_numbers
   end
 
   def test_listing_when_no_reservations
