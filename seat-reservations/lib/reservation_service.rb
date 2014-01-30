@@ -3,12 +3,13 @@ require 'yaml'
 class ReservationService
 
   def initialize
-    @datafile = nil
+    @datafile = "seats.yaml"
     @data = []
   end
 
-  def set_datafile
-    @datafile = "seats.yaml"
+  def data=(data)
+    @datafile = nil
+    @data = data
   end
 
   def reserve(num_seats)
@@ -41,7 +42,7 @@ class ReservationService
   private
 
   def load_data
-    if set_datafile
+    if @datafile
       YAML::load_file(@datafile)
     else
       @data
